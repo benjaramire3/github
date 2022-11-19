@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: rgba(152, 205, 255, 0.653);
+    box-shadow: 0px 0 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.header__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__list {
+    display: flex;
+    gap: 20px;
+}
+.navbar__listItem {
+    list-style: none;
+}
+
+.navbar__menuItem {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: rgb(20, 20, 149);
+    padding: 5px 10px;
+    display: inline-block;
+
+    transition: transform 0.3s ease-in-out, background-color 1s linear;
+}
+
+.navbar__menuItem:hover {
+    transform: scale(2);
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.4);
+    background-color: red;
+}
+
+.header__logo {
+    max-height: 60px;
+}
+
+.banner {
+    width: 100%;
+    height: 400px;
+    background: rgb(71,255,83);
+    background: linear-gradient(281deg, rgba(71,255,83,0) 0%, rgba(62,85,232,0.8239670868347339) 20%, rgba(161,24,36,0.8911939775910365) 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner__content {
+    color: white;
+    max-width: 400px;
+    text-align: center;
+    line-height: 30px;
+    width: 95%;
+    margin: 0 auto;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+
+    box-shadow: 0px 4px 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+.banner__content h2, .banner__content p {
+    font-size: 15px;
+}
+
+.boton {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: #fff;
+    border: 2px solid red;
+    color: red;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.articulos__section {
+    display: grid;
+    margin: 60px auto;
+    max-width: 1100px;
+    width: 95%;
+    row-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+
+}
+
+.articulo {
+    width: 100%;
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid grey;
+    background-color: #fff;
+    transition: all 0.5s cubic-bezier(.12,1.45,.91,-0.39);
+
+}
+
+.articulo__img {
+    width: 100%;
+}
+
+.articulo__content {
+    padding: 12px;
+}
+
+.articulo__content h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.articulo__content p {
+    font-size: 16px;
+}
+
+.articulo--translate {
+    transform: translateX(100px);
+}
+
+.articulo--rotate {
+    transforM: rotateZ(48deg) rotateY(47deg) translate(40px, -50px);
+}
+
+.articulo--scale {
+    transform: scaleY(1.1) scaleX(0.7);
+}
+
+.articulo--skew {
+    transform: skew(20deg);
+}
+
+.form__container {
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+}
+
+.form {
+    background-color:rgba(152, 205, 255, 0.653);
+    border-radius: 10px;
+    max-width: 400px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form__input {
+    width: 5%;
+    padding: 5px 9px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    background-color: #fff;
+    transition: all .3s ease-in;
+}
+
+.form__input:focus {
+    border-bottom: 2px rgb(254, 64, 30) solid;
+    width: 100%;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+textarea {
+    resize: none;
+}
+
+.btn-enviar {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background-color: rgb(254, 64, 30);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.articulo--highlight {
+    animation-name: myanimation;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-delay: 2s;
+}
+
+.articulo--translate:hover {
+    animation-name: rotate;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.header__logo {
+    animation-name: rotatelogo;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
